@@ -33,6 +33,12 @@ yarn-error.log*
 # vercel
 .vercel
 
+# Local Netlify folder
+.netlify
+
+/out_functions/
+/out_publish/
+
 .env
 
 .vscode
