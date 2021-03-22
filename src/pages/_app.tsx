@@ -1,7 +1,7 @@
 import { useState, useEffect, useMemo, useCallback } from "react";
 import * as R from "ramda";
 import Head from "next/head";
-import { AppProps } from "next/app";
+import { AppProps, NextWebVitalsMetric } from "next/app";
 import { Provider as AuthProvider } from "next-auth/client";
 import { DefaultSeo } from "next-seo";
 import { SnackbarProvider } from "notistack";
@@ -16,7 +16,7 @@ import SEO from "../../next-seo.config";
 
 export const cache = createCache({ key: "css", prepend: true });
 
-export default function MyApp({ Component, pageProps }: AppProps) {
+const App = ({ Component, pageProps }: AppProps) => {
   const [paletteMode, setPaletteMode] = useState<PaletteMode>("dark");
   const apolloClient = useApollo(pageProps);
 
@@ -85,4 +85,21 @@ export default function MyApp({ Component, pageProps }: AppProps) {
       </ThemeProvider>
     </CacheProvider>
   );
-}
+};
+
+export const reportWebVitals = ({
+  id,
+  name,
+  label,
+  value,
+}: NextWebVitalsMetric) => {
+  window.gtag("event", name, {
+    event_category:
+      label === "web-vital" ? "Web Vitals" : "Next.js custom metric",
+    value: Math.round(name === "CLS" ? value * 1000 : value), // values must be integers
+    event_label: id, // id unique to current page load
+    non_interaction: true, // avoids affecting bounce rate.
+  });
+};
+
+export default App;

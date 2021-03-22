@@ -7,7 +7,7 @@ import { cache } from "pages/_app";
 
 const { extractCritical } = createEmotionServer(cache);
 
-const GA_TRACKING_ID = "G-GGP4M9FB3V";
+const GA_TRACKING_ID = "G-Q3TKNNQ65M";
 
 const gaScript = `
   window.dataLayer = window.dataLayer || [];
