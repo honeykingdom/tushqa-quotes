@@ -73,7 +73,10 @@ const App = ({ Component, pageProps }: AppProps) => {
         <link rel="manifest" href="/manifest.json" />
       </Head>
       <ThemeProvider theme={theme}>
-        <AuthProvider session={pageProps.session}>
+        <AuthProvider
+          session={pageProps.session}
+          options={{ keepAlive: Infinity, clientMaxAge: Infinity }}
+        >
           <ApolloProvider client={apolloClient}>
             <SnackbarProvider maxSnack={1}>
               <DefaultSeo {...SEO} />
