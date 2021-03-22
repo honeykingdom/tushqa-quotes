@@ -29,7 +29,7 @@ jobs:
       #   run: yarn test --ci --coverage --maxWorkers=2
 
       - name: Build
-        run: yarn build && yarn export
+        run: yarn build
 
       - name: Publish
         uses: netlify/actions/cli@master
