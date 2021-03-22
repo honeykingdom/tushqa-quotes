@@ -4,10 +4,10 @@ import fs from "fs";
 import { createHash } from "crypto";
 import dotenv from "dotenv";
 import { parseISO } from "date-fns";
-import getQuoteCount from "../src/utils/getQuoteCount";
-import getQuoteDate from "../src/utils/getQuoteDate";
+import getQuoteCount from "./utils/getQuoteCount";
+import getQuoteDate from "./utils/getQuoteDate";
+import parseMessageParts from "./utils/parseMessageParts";
 import filterQuotes from "../src/utils/filterQuotes";
-import parseMessageParts from "../src/utils/parseMessageParts";
 import { RawQuoteType } from "../src/types";
 
 dotenv.config();
