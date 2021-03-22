@@ -7,6 +7,15 @@ import { cache } from "pages/_app";
 
 const { extractCritical } = createEmotionServer(cache);
 
+const GA_TRACKING_ID = "G-GGP4M9FB3V";
+
+const gaScript = `
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', '${GA_TRACKING_ID}', { page_path: window.location.pathname });
+`;
+
 export default class MyDocument extends Document {
   render() {
     return (
@@ -16,6 +25,7 @@ export default class MyDocument extends Document {
             rel="stylesheet"
             href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
           />
+          <script dangerouslySetInnerHTML={{ __html: gaScript }} />
         </Head>
         <body>
           <Main />
