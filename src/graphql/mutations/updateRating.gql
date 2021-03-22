@@ -1,0 +1,6 @@
+mutation UpdateRating($data: RatingInput!) {
+  updateRating(data: $data) {
+    postId
+    value
+  }
+}
