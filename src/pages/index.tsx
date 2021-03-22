@@ -1,6 +1,5 @@
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useState } from "react";
 import * as R from "ramda";
-import { useSnackbar } from "notistack";
 import { Container, Box } from "@material-ui/core";
 import { useSession } from "next-auth/client";
 import Header from "components/Header";
@@ -31,9 +30,7 @@ const Home = ({ switchTheme }: Props) => {
   const handleOpen = useCallback(() => setIsModalOpen(true), []);
   const handleClose = useCallback(() => setIsModalOpen(false), []);
 
-  const { data, loading, refetch } = usePostRatingQuery();
-
-  useEffect(() => void refetch(), [session?.user]);
+  const { data, loading } = usePostRatingQuery();
 
   const modifiedQuotes: QuoteType[] = (quotes as RawQuoteType[]).map(
     (quote) => {
