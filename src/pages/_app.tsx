@@ -42,11 +42,11 @@ export default function MyApp({ Component, pageProps }: AppProps) {
 
   // TODO: remove this
   useEffect(() => {
-    if (typeof window === "undefined") return undefined;
+    if (typeof window !== "undefined") {
+      const body = document.querySelector("body");
 
-    const body = document.querySelector("body");
-
-    body!.style.backgroundColor = theme.palette.background.default;
+      body!.style.backgroundColor = theme.palette.background.default;
+    }
   }, [paletteMode]);
 
   return (
