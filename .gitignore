@@ -32,3 +32,10 @@ yarn-error.log*
 
 # vercel
 .vercel
+
+.env
+
+.vscode
+
+/data/*
+!/data/quotes.json
