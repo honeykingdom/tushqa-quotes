@@ -1,6 +1,6 @@
 // https://github.com/aleccool213/next-js-typeorm-typegraphql-example/blob/master/pages/api/graphql.ts
 import "reflect-metadata";
-import type { NextApiRequest, NextApiResponse } from "next-auth/_utils";
+import type { NextApiRequest, NextApiResponse } from "next";
 import { ApolloServer } from "apollo-server-micro";
 import { buildSchema } from "type-graphql";
 import jwt from "next-auth/jwt";

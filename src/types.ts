@@ -1,4 +1,4 @@
-import type { NextApiRequest, NextApiResponse } from "next-auth/_utils";
+import type { NextApiRequest, NextApiResponse } from "next";
 
 export type QuoteType = {
   id: string;
