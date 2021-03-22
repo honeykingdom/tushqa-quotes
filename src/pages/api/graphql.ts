@@ -29,7 +29,7 @@ const getApolloServerHandler = async () => {
     buildSchema({
       resolvers: [RatingResolver],
       validate: false,
-      emitSchemaFile: true,
+      emitSchemaFile: process.env.NODE_ENV === "development",
     }),
   ]);
 
