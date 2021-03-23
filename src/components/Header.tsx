@@ -2,50 +2,200 @@ import styled from "@emotion/styled";
 import { signIn, signOut, useSession } from "next-auth/client";
 import {
   AppBar,
-  Button,
   Toolbar,
   Typography,
   useTheme,
   Tooltip,
   IconButton,
-  Theme,
   Box,
+  List,
+  ListItem,
+  ListItemIcon,
+  ListItemText,
+  Divider,
+  Hidden,
 } from "@material-ui/core";
 import DarkThemeIcon from "@material-ui/icons/Brightness7";
 import LightThemeIcon from "@material-ui/icons/Brightness4";
 import PurpleButton from "components/PurpleButton";
+import GitHubIcon from "@material-ui/icons/GitHub";
+import MenuIcon from "@material-ui/icons/Menu";
 import TwitchIcon from "icons/twitch";
+import { useState } from "react";
+import SEO from "../../next-seo.config";
 
 const Logo = styled.img`
   margin-right: 12px;
   width: 24px;
   height: 24px;
 `;
-const StyledToolbar = styled(Toolbar)<{ theme?: Theme }>`
-  display: flex;
-  flex-direction: column;
-
-  @media (min-width: ${(p) => p.theme?.breakpoints.values.sm}px) {
-    flex-direction: row;
-  }
-`;
-const Profile = styled(Typography)<{ theme?: Theme }>`
+const StyledToolbar = styled(Toolbar)`
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-
-  @media (min-width: ${(p) => p.theme?.breakpoints.values.sm}px) {
-    margin-left: auto;
-  }
 `;
+const HiddenMenu = styled(Hidden)`
+  margin-left: auto;
+`;
+const HiddenMenuIcon = styled(Hidden)`
+  margin-left: auto;
+`;
+const HiddenMobileMenu = styled(Hidden)`
+  width: 100%;
+`;
+
+const GITHUB_REPOSITORY_URL = "//github.com/honeykingdom/tushqa-quotes";
+const GITHUB_REPOSITORY_CAPTION = "Репозиторий на GitHub";
+const THEME_SWITCHER_CAPTION = "Тёмная/светлая тема";
+const TWITCH_SIGN_IN_CAPTION = "Войти через Twitch";
 
 type Props = {
   switchTheme: () => void;
 };
 
 const Header = ({ switchTheme }: Props) => {
+  const [isMobileMenuVisible, setIsMobileMenuVisible] = useState(false);
   const theme = useTheme();
   const [session, loading] = useSession();
+
+  const themeIcon =
+    theme.palette.mode === "dark" ? <LightThemeIcon /> : <DarkThemeIcon />;
+
+  const signInButton = (
+    <PurpleButton variant="contained" onClick={() => signIn("twitch")}>
+      <TwitchIcon style={{ width: 16 }} />
+      &nbsp; {TWITCH_SIGN_IN_CAPTION}
+    </PurpleButton>
+  );
+
+  const signOutButton = (
+    <PurpleButton variant="contained" onClick={() => signOut()}>
+      Выйти
+    </PurpleButton>
+  );
+
+  const menu = (
+    <Typography
+      color="textPrimary"
+      component="div"
+      display="flex"
+      alignItems="center"
+    >
+      <Tooltip title={THEME_SWITCHER_CAPTION}>
+        <IconButton color="inherit" sx={{ mr: 1 }} onClick={switchTheme}>
+          {themeIcon}
+        </IconButton>
+      </Tooltip>
+      <Tooltip title={GITHUB_REPOSITORY_CAPTION}>
+        <IconButton
+          color="inherit"
+          sx={{ mr: 1 }}
+          href={GITHUB_REPOSITORY_URL}
+          target="_blank"
+          rel="noreferrer noopener"
+        >
+          <GitHubIcon />
+        </IconButton>
+      </Tooltip>
+
+      {!loading && (
+        <>
+          {!session && (
+            <Tooltip title={TWITCH_SIGN_IN_CAPTION}>{signInButton}</Tooltip>
+          )}
+          {session && (
+            <>
+              <Typography
+                variant="body1"
+                color="inherit"
+                sx={{
+                  display: "flex",
+                  alignItems: "center",
+                  mr: 1,
+                  p: 1,
+                }}
+              >
+                <TwitchIcon style={{ height: 24, marginRight: 8 }} />
+                &nbsp;
+                <strong>{session.user.name}</strong>
+              </Typography>
+              <Box sx={{ my: 1 }}>{signOutButton}</Box>
+            </>
+          )}
+        </>
+      )}
+    </Typography>
+  );
+
+  const mobileMenu = (
+    <List>
+      <ListItem button onClick={switchTheme}>
+        <ListItemIcon>{themeIcon}</ListItemIcon>
+        <ListItemText
+          primary={
+            <Typography color="textPrimary">
+              {THEME_SWITCHER_CAPTION}
+            </Typography>
+          }
+        />
+      </ListItem>
+      <ListItem
+        button
+        component="a"
+        href={GITHUB_REPOSITORY_URL}
+        target="_blank"
+        rel="noreferrer noopener"
+      >
+        <ListItemIcon>
+          <GitHubIcon />
+        </ListItemIcon>
+        <ListItemText
+          primary={
+            <Typography color="textPrimary">
+              {GITHUB_REPOSITORY_CAPTION}
+            </Typography>
+          }
+        />
+      </ListItem>
+      <Divider sx={{ my: 1 }} />
+      {!loading && (
+        <>
+          {!session && (
+            <ListItem>
+              <ListItemText primary={signInButton} />
+            </ListItem>
+          )}
+          {session && (
+            <>
+              <ListItem>
+                <ListItemIcon>
+                  <TwitchIcon style={{ width: 24 }} />
+                </ListItemIcon>
+                <ListItemText
+                  primary={
+                    <Typography
+                      fontWeight="bold"
+                      color="textPrimary"
+                      sx={{
+                        overflow: "hidden",
+                        whiteSpace: "nowrap",
+                        textOverflow: "ellipsis",
+                      }}
+                    >
+                      {session.user.name}
+                    </Typography>
+                  }
+                />
+              </ListItem>
+              <ListItem>
+                <ListItemText primary={signOutButton} />
+              </ListItem>
+            </>
+          )}
+        </>
+      )}
+    </List>
+  );
 
   return (
     <AppBar
@@ -58,7 +208,7 @@ const Header = ({ switchTheme }: Props) => {
       }}
     >
       <StyledToolbar>
-        <Box sx={{ display: "flex", alignItems: "center" }}>
+        <Box display="flex" alignItems="center">
           <Logo
             src="/favicon-32x32.png"
             srcSet="/favicon-32x32.png 1x, /android-chrome-192x192.png 2x"
@@ -68,59 +218,32 @@ const Header = ({ switchTheme }: Props) => {
             variant="h6"
             color="textPrimary"
             component="h1"
-            sx={{ py: 1 }}
+            sx={{ py: 2, whiteSpace: "nowrap" }}
           >
-            Цитаты Тушки
+            {SEO.title}
           </Typography>
         </Box>
-        {/* TODO: fix component prop ts error */}
-        {/* @ts-expect-error */}
-        <Profile color="textPrimary" component="div">
-          <Tooltip title="Тёмная/светлая тема">
-            <IconButton color="inherit" sx={{ mr: 1 }} onClick={switchTheme}>
-              {theme.palette.mode === "dark" ? (
-                <LightThemeIcon />
-              ) : (
-                <DarkThemeIcon />
-              )}
-            </IconButton>
-          </Tooltip>
-          {!loading && (
-            <>
-              {!session && (
-                <Tooltip title="Войти через Twitch">
-                  <PurpleButton
-                    variant="contained"
-                    onClick={() => signIn("twitch")}
-                  >
-                    <TwitchIcon style={{ width: 16 }} />
-                    &nbsp; Войти
-                  </PurpleButton>
-                </Tooltip>
-              )}
-              {session && (
-                <>
-                  <Typography
-                    variant="body1"
-                    color="inherit"
-                    sx={{ display: "flex", alignItems: "center", mr: 1 }}
-                  >
-                    <TwitchIcon style={{ width: 20 }} />
-                    &nbsp;
-                    <strong>{session.user.name}</strong>
-                  </Typography>
-                  <Button
-                    color="inherit"
-                    variant="text"
-                    onClick={() => signOut()}
-                  >
-                    Выйти
-                  </Button>
-                </>
-              )}
-            </>
-          )}
-        </Profile>
+
+        <HiddenMenuIcon implementation="css" mdUp>
+          <IconButton
+            edge="end"
+            onClick={() => setIsMobileMenuVisible(!isMobileMenuVisible)}
+          >
+            <MenuIcon />
+          </IconButton>
+        </HiddenMenuIcon>
+
+        <HiddenMenu implementation="css" mdDown>
+          {menu}
+        </HiddenMenu>
+
+        <HiddenMobileMenu
+          implementation="css"
+          xsUp={!isMobileMenuVisible}
+          mdUp={isMobileMenuVisible}
+        >
+          {mobileMenu}
+        </HiddenMobileMenu>
       </StyledToolbar>
     </AppBar>
   );
