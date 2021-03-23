@@ -28,7 +28,7 @@ const App = ({ Component, pageProps }: AppProps) => {
     [paletteMode]
   );
 
-  const switchTheme = useCallback(() => {
+  const toggleTheme = useCallback(() => {
     setPaletteMode(paletteMode === "dark" ? "light" : "dark");
   }, [paletteMode]);
 
@@ -63,7 +63,7 @@ const App = ({ Component, pageProps }: AppProps) => {
             <SnackbarProvider maxSnack={1}>
               <DefaultSeo {...SEO} />
               <CssBaseline />
-              <Component {...pageProps} switchTheme={switchTheme} />
+              <Component {...pageProps} toggleTheme={toggleTheme} />
             </SnackbarProvider>
           </ApolloProvider>
         </AuthProvider>

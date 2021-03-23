@@ -19,10 +19,10 @@ export const defaultFilters: FiltersType = {
 };
 
 type Props = {
-  switchTheme: () => void;
+  toggleTheme: () => void;
 };
 
-const Home = ({ switchTheme }: Props) => {
+const Home = ({ toggleTheme }: Props) => {
   const [session, authLoading] = useSession();
   const [filters, setFilters] = useState<FiltersType>(defaultFilters);
 
@@ -55,7 +55,7 @@ const Home = ({ switchTheme }: Props) => {
 
   return (
     <>
-      <Header switchTheme={switchTheme} />
+      <Header toggleTheme={toggleTheme} />
       <Container maxWidth="md">
         <Box sx={{ my: 4 }}>
           <Filters changeFilters={setFilters} />

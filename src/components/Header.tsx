@@ -50,10 +50,10 @@ const THEME_SWITCHER_CAPTION = "Тёмная/светлая тема";
 const TWITCH_SIGN_IN_CAPTION = "Войти через Twitch";
 
 type Props = {
-  switchTheme: () => void;
+  toggleTheme: () => void;
 };
 
-const Header = ({ switchTheme }: Props) => {
+const Header = ({ toggleTheme }: Props) => {
   const [isMobileMenuVisible, setIsMobileMenuVisible] = useState(false);
   const theme = useTheme();
   const [session, loading] = useSession();
@@ -82,7 +82,7 @@ const Header = ({ switchTheme }: Props) => {
       alignItems="center"
     >
       <Tooltip title={THEME_SWITCHER_CAPTION}>
-        <IconButton color="inherit" sx={{ mr: 1 }} onClick={switchTheme}>
+        <IconButton color="inherit" sx={{ mr: 1 }} onClick={toggleTheme}>
           {themeIcon}
         </IconButton>
       </Tooltip>
@@ -129,7 +129,7 @@ const Header = ({ switchTheme }: Props) => {
 
   const mobileMenu = (
     <List>
-      <ListItem button onClick={switchTheme}>
+      <ListItem button onClick={toggleTheme}>
         <ListItemIcon>{themeIcon}</ListItemIcon>
         <ListItemText
           primary={
