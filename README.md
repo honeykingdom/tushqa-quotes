@@ -1,4 +1,8 @@
-# tushqa-quotes
+# Цитаты Тушки
+
+Лучшие цитаты Тушки в чатах Ласки и Сегалла за всё время
+
+https://tushqa-quotes.vercel.app
 
 ## Technologies
 
