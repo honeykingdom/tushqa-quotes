@@ -2,18 +2,15 @@ import * as React from "react";
 import Document, { Html, Head, Main, NextScript } from "next/document";
 import { ServerStyleSheets } from "@material-ui/core/styles";
 import createEmotionServer from "@emotion/server/create-instance";
-import theme from "theme";
 import { cache } from "pages/_app";
 
 const { extractCritical } = createEmotionServer(cache);
-
-const GA_TRACKING_ID = "G-Q3TKNNQ65M";
 
 const gaScript = `
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-  gtag('config', '${GA_TRACKING_ID}', { page_path: window.location.pathname });
+  gtag('config', '${process.env.GA_TRACKING_ID}', { page_path: window.location.pathname });
 `;
 
 export default class MyDocument extends Document {
@@ -21,9 +18,33 @@ export default class MyDocument extends Document {
     return (
       <Html lang="ru">
         <Head>
+          <link rel="preconnect" href="https://fonts.gstatic.com" />
           <link
             rel="stylesheet"
             href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+          />
+          <link
+            rel="apple-touch-icon"
+            sizes="180x180"
+            href="/apple-touch-icon.png"
+          />
+          <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="/favicon-32x32.png"
+          />
+          <link
+            rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="/favicon-16x16.png"
+          />
+          <link rel="manifest" href="/manifest.json" />
+
+          <script
+            async
+            src={`https://www.googletagmanager.com/gtag/js?id=${process.env.GA_TRACKING_ID}`}
           />
           <script dangerouslySetInnerHTML={{ __html: gaScript }} />
         </Head>
