@@ -1,11 +1,4 @@
-import {
-  Modal,
-  Typography,
-  Button,
-  IconButton,
-  Paper,
-  Box,
-} from "@material-ui/core";
+import { Modal, Typography, IconButton, Paper, Box } from "@material-ui/core";
 import CloseIcon from "@material-ui/icons/Close";
 import { signIn } from "next-auth/client";
 import PurpleButton from "components/PurpleButton";
