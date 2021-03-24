@@ -1,28 +1,27 @@
 import { useEffect, useMemo, useRef, useState } from "react";
-import styled from "@emotion/styled";
 import { debounce } from "lodash";
-import { Typography, Box, Button, Slider, Theme } from "@material-ui/core";
+import { Typography, Box, Button, Slider } from "@material-ui/core";
+import { experimentalStyled as styled } from "@material-ui/core/styles";
 import ArrowUpwardIcon from "@material-ui/icons/ArrowUpward";
 import ArrowDownwardIcon from "@material-ui/icons/ArrowDownward";
 import { defaultFilters } from "pages/index";
 import type { FiltersType } from "types";
 
-// TODO: fix theme typings
-const FiltersRoot = styled.div<{ theme?: Theme }>`
+const FiltersRoot = styled("div")`
   display: flex;
   flex-direction: column;
   align-items: flex-end;
   justify-content: flex-start;
 
-  @media (min-width: ${(p) => p.theme?.breakpoints.values.sm}px) {
+  @media (min-width: ${(p) => p.theme.breakpoints.values.sm}px) {
     flex-direction: row;
     justify-content: flex-end;
     align-items: flex-start;
   }
 `;
 
-const StyledSlider = styled(Slider)<{ theme?: Theme }>`
-  color: ${(p) => p.theme?.palette.text.secondary};
+const StyledSlider = styled(Slider)`
+  color: ${(p) => p.theme.palette.text.secondary};
 
   .MuiSlider-thumb:hover,
   .MuiSlider-thumb.Mui-focusVisible {
