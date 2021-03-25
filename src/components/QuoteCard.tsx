@@ -21,9 +21,6 @@ import {
   useUpdateRatingMutation,
 } from "generated/graphql";
 
-const NickName = styled.strong`
-  color: #e05b5b;
-`;
 const CardInner = styled.div`
   display: flex;
 `;
@@ -278,7 +275,10 @@ const QuoteCard = ({
                 : theme.palette.grey[50],
           }}
         >
-          <NickName>tushqa</NickName>: {renderMessageParts(messageParts)}
+          <Typography color="secondary" component="span" fontWeight="bold">
+            Tushqa
+          </Typography>
+          : {renderMessageParts(messageParts)}
         </Paper>
         <Box sx={{ pt: 1 }}>
           <Typography color="textSecondary" variant="caption" sx={{ mr: 1 }}>
