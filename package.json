@@ -6,9 +6,10 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "dev-server": "nodemon --exec ts-node src/dev-server.ts",
+    "dev-server": "nodemon --exec ts-node dev-server.ts",
     "gen": "graphql-codegen",
-    "parse-quotes": "cross-env TS_NODE_COMPILER_OPTIONS='{\\\"module\\\":\\\"commonjs\\\"}' ts-node ./scripts/parseQuotes"
+    "parse-quotes": "cross-env TS_NODE_COMPILER_OPTIONS='{\\\"module\\\":\\\"commonjs\\\"}' ts-node ./scripts/parseQuotes",
+    "copy-logs": "cross-env TS_NODE_COMPILER_OPTIONS='{\\\"module\\\":\\\"commonjs\\\"}' ts-node ./scripts/copyLogs"
   },
   "dependencies": {
     "@apollo/client": "^3.3.13",
