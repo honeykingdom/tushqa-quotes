@@ -58,11 +58,12 @@ const iterateUserMessages = (
 };
 
 const main = () => {
-  let logFolders = process.argv.slice(2);
+  const channels = process.env.PARSED_CHANNELS!.split(";");
+  const twitchLogsFolder = process.env.TWITCH_LOGS_FOLDER!;
 
-  if (logFolders.length === 0) {
-    logFolders = process.env.TWITCH_LOG_FOLDERS!.split(";");
-  }
+  const logFolders = channels.map((channel) =>
+    path.join(twitchLogsFolder, channel)
+  );
 
   const quotes: ParsedQuote[] = fs
     .readFileSync("./data/quotes.md", "utf8")
