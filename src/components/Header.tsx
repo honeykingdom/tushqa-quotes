@@ -117,7 +117,7 @@ const Header = ({ toggleTheme }: Props) => {
               >
                 <TwitchIcon style={{ height: 24, marginRight: 8 }} />
                 &nbsp;
-                <strong>{session.user.name}</strong>
+                <strong>{session.user?.name}</strong>
               </Typography>
               <Box sx={{ my: 1 }}>{signOutButton}</Box>
             </>
@@ -182,7 +182,7 @@ const Header = ({ toggleTheme }: Props) => {
                         textOverflow: "ellipsis",
                       }}
                     >
-                      {session.user.name}
+                      {session.user?.name}
                     </Typography>
                   }
                 />
