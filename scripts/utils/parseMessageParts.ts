@@ -96,6 +96,7 @@ const emotes: Record<string, ["twitch" | "ffz" | "bttv", number | string]> = {
   CrabPls: ["bttv", "5c2a4ddda402f16774559abe"],
   pepeBASS: ["bttv", "5b215a245eaa38694dc91635"],
   Clap: ["bttv", "55b6f480e66682f576dd94f5"],
+  PepegaAim: ["bttv", "5d0d7140ca4f4b50240ff6b4"],
 };
 
 const emojisList = Object.values(emojisMap);
