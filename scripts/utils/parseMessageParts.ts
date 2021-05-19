@@ -58,6 +58,7 @@ const emotes: Record<string, ["twitch" | "ffz" | "bttv", number | string]> = {
   peepoKnife: ["ffz", 270499],
   peepoHappy: ["ffz", 228449],
   PepoThink: ["ffz", 174942],
+  FeelsWeirdMan: ["ffz", 131597],
   catJAM: ["bttv", "5f1b0186cf6d2144653d2970"],
   CatJam: ["bttv", "5f1b0186cf6d2144653d2970"],
   pepeJAMMER: ["bttv", "5f7bc0e2ce8bc74a94246971"],
