@@ -25,7 +25,7 @@
     "channels": [
       {
         "name": "lasqa",
-        "count": 11
+        "count": 50
       },
       {
         "name": "segall",
@@ -33,7 +33,7 @@
       }
     ],
     "timestamp": 1621528685000,
-    "count": 50
+    "count": 89
   },
   {
     "id": "c9349f617c0617e253ace52f88d21d56",
