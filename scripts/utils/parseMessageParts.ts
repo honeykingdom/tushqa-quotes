@@ -100,6 +100,7 @@ const emotes: Record<string, ["twitch" | "ffz" | "bttv", number | string]> = {
   PepegaAim: ["bttv", "5d0d7140ca4f4b50240ff6b4"],
   EZDance: ["bttv", "5bfea90de7a4c109c7d4562b"],
   HACKERMANS: ["bttv", "5b490e73cf46791f8491f6f4"],
+  PepeChill: ["bttv", "5eb9d6c6813f92169355870e"],
 };
 
 const emojisList = Object.values(emojisMap);
