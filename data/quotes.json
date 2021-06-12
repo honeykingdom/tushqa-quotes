@@ -61,7 +61,13 @@
     "id": "ec468aec31d2e44b0d0b24ee66f76c8d",
     "message": "ПРИПЕЧАТАЛО PepeChill ПРИПЕЧАЛИЛО ResidentSleeper РАСПЕЧАТАЛО FeelsOkayMan ДВАПЕЧАТАЛО HACKERMANS HACKERMANS",
     "messageParts": [
-      "ПРИПЕЧАТАЛО PepeChill ПРИПЕЧАЛИЛО ",
+      "ПРИПЕЧАТАЛО ",
+      [
+        "bttv",
+        "5eb9d6c6813f92169355870e",
+        "PepeChill"
+      ],
+      " ПРИПЕЧАЛИЛО ",
       [
         "twitch",
         245,
