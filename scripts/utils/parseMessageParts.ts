@@ -86,6 +86,7 @@ const emotes: Record<string, ["twitch" | "ffz" | "bttv", number | string]> = {
   RarestParrot: ["bttv", "56a6316731f511db3dde2042"],
   KKool: ["bttv", "56c2cff2d9ec6bf744247bf1"],
   WeirdChamp: ["bttv", "5d20a55de1cfde376e532972"],
+  weirdChamp: ["bttv", "5d20a55de1cfde376e532972"],
   PepoCheer: ["bttv", "5abd36396723dc149c678e90"],
   LasqaPls: ["bttv", "5bbb8873e4ed26378c1e9e0b"],
   peepoSprint: ["bttv", "5c20a897fef84f19d3274cb0"],
