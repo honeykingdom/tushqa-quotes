@@ -100,63 +100,61 @@ const renderMessageParts = (messageParts: MessagePart[]) =>
     return null;
   });
 
-const updateAfterVote = (
-  postId: string,
-  prevUserRating: number,
-  newUserRating: number
-) => (cache: ApolloCache<UpdateRatingMutation>) => {
-  const POST_RATING_FRAGMENT = gql`
-    fragment _ on PostRating {
-      postId
-      fullRating
-      userRating
-    }
-  `;
+const updateAfterVote =
+  (postId: string, prevUserRating: number, newUserRating: number) =>
+  (cache: ApolloCache<UpdateRatingMutation>) => {
+    const POST_RATING_FRAGMENT = gql`
+      fragment _ on PostRating {
+        postId
+        fullRating
+        userRating
+      }
+    `;
 
-  const POST_RATING_ID = cache.identify({ __typename: "PostRating", postId });
+    const POST_RATING_ID = cache.identify({ __typename: "PostRating", postId });
 
-  let postRatingFragment = cache.readFragment<PostRating>({
-    id: POST_RATING_ID,
-    fragment: POST_RATING_FRAGMENT,
-  });
-
-  if (!postRatingFragment) {
-    postRatingFragment = {
-      __typename: "PostRating",
-      postId,
-      fullRating: newUserRating,
-      userRating: newUserRating,
-    };
-
-    cache.modify({
-      fields: {
-        postRating: (postRatingRefs = []) => {
-          const newPostRatingRef = cache.writeFragment<PostRating>({
-            id: POST_RATING_ID,
-            fragment: POST_RATING_FRAGMENT,
-            data: postRatingFragment!,
-          });
-
-          return [...postRatingRefs, newPostRatingRef];
-        },
-      },
-    });
-
-    return;
-  }
-
-  if (prevUserRating !== newUserRating) {
-    const diff = -prevUserRating + newUserRating;
-
-    cache.modify({
+    let postRatingFragment = cache.readFragment<PostRating>({
       id: POST_RATING_ID,
-      fields: {
-        fullRating: (prevFullRating) => prevFullRating + diff,
-        userRating: () => newUserRating,
-      },
+      fragment: POST_RATING_FRAGMENT,
     });
-  }
-};
+
+    if (!postRatingFragment) {
+      postRatingFragment = {
+        __typename: "PostRating",
+        postId,
+        fullRating: newUserRating,
+        userRating: newUserRating,
+      };
+
+      cache.modify({
+        fields: {
+          postRating: (postRatingRefs = []) => {
+            const newPostRatingRef = cache.writeFragment<PostRating>({
+              id: POST_RATING_ID,
+              fragment: POST_RATING_FRAGMENT,
+              data: postRatingFragment!,
+            });
+
+            return [...postRatingRefs, newPostRatingRef];
+          },
+        },
+      });
+
+      return;
+    }
+
+    if (prevUserRating !== newUserRating) {
+      const diff = -prevUserRating + newUserRating;
+
+      cache.modify({
+        id: POST_RATING_ID,
+        fields: {
+          fullRating: (prevFullRating) => prevFullRating + diff,
+          userRating: () => newUserRating,
+        },
+      });
+    }
+  };
 
 const timesLabels = ["раз", "раза", "раз"] as [string, string, string];
 
