@@ -1,6 +1,6 @@
 import { Fragment, useMemo, memo } from "react";
 import { format } from "date-fns";
-import { useSnackbar } from "notistack";
+// import { useSnackbar } from "notistack";
 import styled from "@emotion/styled";
 import { ApolloCache, gql } from "@apollo/client";
 import {
@@ -177,13 +177,13 @@ const QuoteCard = ({
   onOpenSignInModal,
 }: Props) => {
   const theme = useTheme();
-  const { enqueueSnackbar } = useSnackbar();
+  // const { enqueueSnackbar } = useSnackbar();
   const [updateRating] = useUpdateRatingMutation({
-    onError: () =>
-      enqueueSnackbar("Ошибка. Сервер не отвечает", {
-        variant: "error",
-        autoHideDuration: 3000,
-      }),
+    // onError: () =>
+    //   enqueueSnackbar("Ошибка. Сервер не отвечает", {
+    //     variant: "error",
+    //     autoHideDuration: 3000,
+    //   }),
   });
   const date = format(timestamp, "P");
 
