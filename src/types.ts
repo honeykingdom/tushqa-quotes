@@ -54,3 +54,19 @@ export enum RatingValue {
   DEFAULT = 0,
   UPVOTE = 1,
 }
+
+declare module "@material-ui/core/styles" {
+  interface Palette {
+    thirdly: Palette["primary"];
+  }
+  interface PaletteOptions {
+    thirdly: PaletteOptions["primary"];
+  }
+
+  interface Palette {
+    fourthly: Palette["primary"];
+  }
+  interface PaletteOptions {
+    fourthly: PaletteOptions["primary"];
+  }
+}
