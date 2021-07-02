@@ -11,9 +11,7 @@ import { CacheProvider } from "@emotion/react";
 import themes from "theme";
 import { useApollo } from "apolloClient";
 import SEO from "../../next-seo.config";
-import { getCache } from "./_document";
-
-const cache = getCache();
+import { cache } from "./_document";
 
 const App = ({ Component, pageProps }: AppProps) => {
   const [paletteMode, setPaletteMode] = useState<PaletteMode>("dark");

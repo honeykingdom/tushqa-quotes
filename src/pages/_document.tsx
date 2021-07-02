@@ -4,12 +4,14 @@ import createCache from "@emotion/cache";
 import Document, { Html, Head, Main, NextScript } from "next/document";
 import createEmotionServer from "@emotion/server/create-instance";
 
-export const getCache = () => {
+const getCache = () => {
   const cache = createCache({ key: "css", prepend: true });
   cache.compat = true;
 
   return cache;
 };
+
+export const cache = getCache();
 
 const gaScript = `
   window.dataLayer = window.dataLayer || [];
@@ -89,7 +91,6 @@ MyDocument.getInitialProps = async (ctx) => {
 
   const originalRenderPage = ctx.renderPage;
 
-  const cache = getCache();
   const { extractCriticalToChunks } = createEmotionServer(cache);
 
   ctx.renderPage = () =>
