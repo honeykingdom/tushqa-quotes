@@ -8,13 +8,12 @@ import { ApolloProvider } from "@apollo/client";
 import { CssBaseline, PaletteMode } from "@material-ui/core";
 import { ThemeProvider, createTheme } from "@material-ui/core/styles";
 import { CacheProvider } from "@emotion/react";
-import createCache from "@emotion/cache";
 import themes from "theme";
 import { useApollo } from "apolloClient";
 import SEO from "../../next-seo.config";
+import { getCache } from "./_document";
 
-const cache = createCache({ key: "css", prepend: true });
-cache.compat = true;
+const cache = getCache();
 
 const App = ({ Component, pageProps }: AppProps) => {
   const [paletteMode, setPaletteMode] = useState<PaletteMode>("dark");

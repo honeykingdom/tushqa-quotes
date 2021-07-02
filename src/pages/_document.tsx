@@ -4,7 +4,7 @@ import createCache from "@emotion/cache";
 import Document, { Html, Head, Main, NextScript } from "next/document";
 import createEmotionServer from "@emotion/server/create-instance";
 
-const getCache = () => {
+export const getCache = () => {
   const cache = createCache({ key: "css", prepend: true });
   cache.compat = true;
 
