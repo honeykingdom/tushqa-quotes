@@ -14,10 +14,10 @@ import {
   ListItemText,
   Divider,
   Hidden,
+  Button,
 } from "@material-ui/core";
 import DarkThemeIcon from "@material-ui/icons/Brightness7";
 import LightThemeIcon from "@material-ui/icons/Brightness4";
-import PurpleButton from "components/PurpleButton";
 import GitHubIcon from "@material-ui/icons/GitHub";
 import MenuIcon from "@material-ui/icons/Menu";
 import TwitchIcon from "icons/twitch";
@@ -62,16 +62,22 @@ const Header = ({ toggleTheme }: Props) => {
     theme.palette.mode === "dark" ? <LightThemeIcon /> : <DarkThemeIcon />;
 
   const signInButton = (
-    <PurpleButton variant="contained" onClick={() => signIn("twitch")}>
+    <Button
+      variant="contained"
+      // @ts-expect-error
+      color="fourthly"
+      onClick={() => signIn("twitch")}
+    >
       <TwitchIcon style={{ width: 16 }} />
       &nbsp; {TWITCH_SIGN_IN_CAPTION}
-    </PurpleButton>
+    </Button>
   );
 
   const signOutButton = (
-    <PurpleButton variant="contained" onClick={() => signOut()}>
+    // @ts-expect-error
+    <Button variant="contained" color="fourthly" onClick={() => signOut()}>
       Выйти
-    </PurpleButton>
+    </Button>
   );
 
   const menu = (
@@ -201,6 +207,7 @@ const Header = ({ toggleTheme }: Props) => {
     <AppBar
       position="static"
       sx={{
+        backgroundImage: "none",
         backgroundColor:
           theme.palette.mode === "dark"
             ? theme.palette.grey[900]

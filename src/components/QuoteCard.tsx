@@ -241,18 +241,20 @@ const QuoteCard = ({
     >
       <IconButton
         size="small"
-        color={isUpVoted ? "secondary" : "inherit"}
+        // @ts-expect-error
+        color={isUpVoted ? "thirdly" : "inherit"}
         disabled={isDisabled}
         onClick={handleUpVote}
       >
         <ArrowUpwardIcon />
       </IconButton>
-      <Typography color={isUpVoted || isDownVoted ? "secondary" : "inherit"}>
+      <Typography color={isUpVoted || isDownVoted ? "#ff69b4" : "inherit"}>
         {fullRating}
       </Typography>
       <IconButton
         size="small"
-        color={isDownVoted ? "secondary" : "inherit"}
+        // @ts-expect-error
+        color={isDownVoted ? "thirdly" : "inherit"}
         disabled={isDisabled}
         onClick={handleDownVote}
       >
@@ -267,13 +269,14 @@ const QuoteCard = ({
         <Paper
           sx={{
             p: 2,
+            backgroundImage: "none",
             bgcolor:
               theme.palette.mode === "dark"
                 ? theme.palette.grey[900]
                 : theme.palette.grey[50],
           }}
         >
-          <Typography color="secondary" component="span" fontWeight="bold">
+          <Typography color="#ff69b4" component="span" fontWeight="bold">
             Tushqa
           </Typography>
           : {renderMessageParts(messageParts)}
@@ -328,7 +331,7 @@ const QuoteCard = ({
   );
 
   return (
-    <Card>
+    <Card sx={{ backgroundImage: "none" }}>
       <CardInner>
         {renderRating()}
         {quoteElement}

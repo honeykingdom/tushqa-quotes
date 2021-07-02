@@ -1,7 +1,13 @@
-import { Modal, Typography, IconButton, Paper, Box } from "@material-ui/core";
+import {
+  Modal,
+  Typography,
+  IconButton,
+  Paper,
+  Box,
+  Button,
+} from "@material-ui/core";
 import CloseIcon from "@material-ui/icons/Close";
 import { signIn } from "next-auth/client";
-import PurpleButton from "components/PurpleButton";
 import TwitchIcon from "icons/twitch";
 
 type Props = {
@@ -37,14 +43,16 @@ const SignInModal = ({ open, onClose }: Props) => {
           Вам нужно войти, чтобы оценивать цитаты
         </Typography>
         <Box sx={{ display: "flex", justifyContent: "center" }}>
-          <PurpleButton
+          <Button
             variant="contained"
+            // @ts-expect-error
+            color="fourthly"
             sx={{ mt: 2 }}
             onClick={() => signIn("twitch")}
           >
             <TwitchIcon style={{ width: 16 }} />
             &nbsp; Войти через Twitch
-          </PurpleButton>
+          </Button>
         </Box>
       </Paper>
     </Modal>
