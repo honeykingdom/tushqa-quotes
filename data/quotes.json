@@ -1,5 +1,43 @@
 [
   {
+    "id": "da7b94028f0c179641900ad7f81d03bc",
+    "message": "РАЗГОВОРОВ МНОГО ◽ СЛОВ ДОХУЯ ◽ ВОТ НИТКА С ИГОЛКОЙ ◽ НАЧИНАЙ СО РТА :)",
+    "messageParts": [
+      "РАЗГОВОРОВ МНОГО ",
+      [
+        "emoji",
+        "white_medium_small_square",
+        "25fd"
+      ],
+      " СЛОВ ДОХУЯ ",
+      [
+        "emoji",
+        "white_medium_small_square",
+        "25fd"
+      ],
+      " ВОТ НИТКА С ИГОЛКОЙ ",
+      [
+        "emoji",
+        "white_medium_small_square",
+        "25fd"
+      ],
+      " НАЧИНАЙ СО РТА ",
+      [
+        "twitch",
+        1,
+        ":)"
+      ]
+    ],
+    "channels": [
+      {
+        "name": "segall",
+        "count": 19
+      }
+    ],
+    "timestamp": 1625333963000,
+    "count": 19
+  },
+  {
     "id": "b1f09e82b32b1514312763945b8eb7ed",
     "message": "КИСУ КИСУ BoomerPls СУКИ СУКИ BoomerPls КИ BoomerPls СУ СУКИ BoomerPls КИ BoomerPls СУ СУКИ BoomerPls",
     "messageParts": [
