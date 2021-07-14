@@ -9,6 +9,9 @@ import { getQuotes } from "server/utils/getQuotes";
 import { Context, User } from "types";
 import { createConnection } from "server/db";
 
+// TODO: https://github.com/vercel/vercel/discussions/5846
+require("ts-tiny-invariant");
+
 const secret = process.env.SECRET!;
 
 export const config = { api: { bodyParser: false } };
