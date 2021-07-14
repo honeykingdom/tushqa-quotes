@@ -30,12 +30,16 @@
     ],
     "channels": [
       {
+        "name": "lasqa",
+        "count": 15
+      },
+      {
         "name": "segall",
-        "count": 6
+        "count": 29
       }
     ],
     "timestamp": 1626168295000,
-    "count": 6
+    "count": 44
   },
   {
     "id": "2cdfcd62e1718c4b74e18e3406f00582",
