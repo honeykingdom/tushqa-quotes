@@ -43,6 +43,8 @@ const getApolloServerHandler = async () => {
     }),
   });
 
+  await apolloServer.start();
+
   apolloServerHandler = apolloServer.createHandler({ path: "/api/graphql" });
 
   return apolloServerHandler;
