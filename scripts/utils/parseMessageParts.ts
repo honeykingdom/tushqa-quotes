@@ -2,7 +2,9 @@ import R from "ramda";
 import { MessagePart, TwitchEmote, BttvEmote, FfzEmote, Emoji } from "types";
 import emojisMap from "./emojisMap.json";
 
-const emotes: Record<string, ["twitch" | "ffz" | "bttv", number | string]> = {
+type Emote = ["twitch" | "ffz", number] | ["bttv", string];
+
+const emotes: Record<string, Emote> = {
   "R)": ["twitch", 14],
   ";p": ["twitch", 13],
   ":p": ["twitch", 12],
