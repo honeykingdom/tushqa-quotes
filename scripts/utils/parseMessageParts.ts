@@ -20,6 +20,7 @@ const emotes: Record<string, ["twitch" | "ffz" | "bttv", number | string]> = {
   ResidentSleeper: ["twitch", 245],
   "4Head": ["twitch", 354],
   mcaT: ["twitch", 35063],
+  KomodoHype: ["twitch", 81273],
   LUL: ["twitch", 425618],
   PogChamp: ["twitch", 305954156],
   "4HEader": ["ffz", 165784],
