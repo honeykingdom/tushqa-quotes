@@ -13,8 +13,8 @@ export const APOLLO_STATE_PROP_NAME = "__APOLLO_STATE__";
 
 let apolloClient: ApolloClient<NormalizedCacheObject>;
 
-const createApolloClient = () => {
-  return new ApolloClient({
+const createApolloClient = () =>
+  new ApolloClient({
     ssrMode: typeof window === "undefined",
     link: new HttpLink({
       uri:
@@ -34,7 +34,6 @@ const createApolloClient = () => {
       },
     }),
   });
-};
 
 export const initializeApollo = (initialState = null) => {
   const _apolloClient = apolloClient ?? createApolloClient();
@@ -46,7 +45,6 @@ export const initializeApollo = (initialState = null) => {
     const existingCache = _apolloClient.extract();
 
     // Merge the existing cache into data passed from getStaticProps/getServerSideProps
-    // @ts-expect-error
     const data = merge(initialState, existingCache, {
       // combine arrays using object equality (like in sets)
       arrayMerge: (destinationArray, sourceArray) => [
