@@ -56,24 +56,12 @@ export type UpdateRatingMutationVariables = Exact<{
 }>;
 
 
-export type UpdateRatingMutation = (
-  { __typename?: 'Mutation' }
-  & { updateRating: (
-    { __typename?: 'Rating' }
-    & Pick<Rating, 'postId' | 'value'>
-  ) }
-);
+export type UpdateRatingMutation = { __typename?: 'Mutation', updateRating: { __typename?: 'Rating', postId: string, value: number } };
 
 export type PostRatingQueryVariables = Exact<{ [key: string]: never; }>;
 
 
-export type PostRatingQuery = (
-  { __typename?: 'Query' }
-  & { postRating: Array<(
-    { __typename?: 'PostRating' }
-    & Pick<PostRating, 'postId' | 'fullRating' | 'userRating'>
-  )> }
-);
+export type PostRatingQuery = { __typename?: 'Query', postRating: Array<{ __typename?: 'PostRating', postId: string, fullRating: number, userRating?: Maybe<number> }> };
 
 
 export const UpdateRatingDocument = gql`
