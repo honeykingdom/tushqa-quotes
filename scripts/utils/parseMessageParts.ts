@@ -21,6 +21,7 @@ const emotes: Record<string, Emote> = {
   ":)": ["twitch", 1],
   ResidentSleeper: ["twitch", 245],
   "4Head": ["twitch", 354],
+  EleGiggle: ["twitch", 4339],
   mcaT: ["twitch", 35063],
   OhMyDog: ["twitch", 81103],
   KomodoHype: ["twitch", 81273],
