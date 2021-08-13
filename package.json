@@ -12,7 +12,7 @@
     "copy-logs": "cross-env TS_NODE_COMPILER_OPTIONS='{\\\"module\\\":\\\"commonjs\\\"}' ts-node ./scripts/copyLogs"
   },
   "dependencies": {
-    "@apollo/client": "^3.4.5",
+    "@apollo/client": "^3.4.7",
     "@emotion/react": "^11.4.1",
     "@emotion/server": "^11.4.0",
     "@emotion/styled": "^11.3.0",
@@ -27,8 +27,8 @@
     "lodash": "^4.17.21",
     "micro": "^9.3.4",
     "mongodb": "3.6.10",
-    "next": "^11.0.0",
-    "next-auth": "^3.27.3",
+    "next": "^11.1.0",
+    "next-auth": "^3.28.0",
     "next-seo": "^4.26.0",
     "notistack": "^1.0.10",
     "ramda": "^0.27.1",
@@ -37,7 +37,7 @@
     "reflect-metadata": "^0.1.13",
     "ts-tiny-invariant": "^0.0.3",
     "type-graphql": "^1.1.1",
-    "typeorm": "^0.2.36",
+    "typeorm": "^0.2.37",
     "typescript": "^4.3.5"
   },
   "devDependencies": {
