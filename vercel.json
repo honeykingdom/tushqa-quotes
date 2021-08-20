@@ -3,7 +3,7 @@
     "enabled": false
   },
   "functions": {
-    "api/**/*.js": {
+    "api/**/*.ts": {
       "includeFiles": "data/**"
     }
   }
