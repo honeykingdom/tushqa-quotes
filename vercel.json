@@ -3,7 +3,7 @@
     "enabled": false
   },
   "functions": {
-    "api/graphql.ts": {
+    "api/graphql.js": {
       "includeFiles": "data/**"
     }
   }
