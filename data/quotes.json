@@ -1,5 +1,47 @@
 [
   {
+    "id": "6aa5d470ee32e97d9f00ad02258fe649",
+    "message": "ЭТО САМУРАЙСКИЙ СТИЛЬ ◽ БЫЛ ОДНИМ А СТАЛ ДРУГИМ ◽ ЛЮДИ НЕ МЕНЯЮТСЯ ◽ ЛЮДИ УБИВАЮТСЯ ◾",
+    "messageParts": [
+      "ЭТО САМУРАЙСКИЙ СТИЛЬ ",
+      [
+        "emoji",
+        "white_medium_small_square",
+        "25fd"
+      ],
+      " БЫЛ ОДНИМ А СТАЛ ДРУГИМ ",
+      [
+        "emoji",
+        "white_medium_small_square",
+        "25fd"
+      ],
+      " ЛЮДИ НЕ МЕНЯЮТСЯ ",
+      [
+        "emoji",
+        "white_medium_small_square",
+        "25fd"
+      ],
+      " ЛЮДИ УБИВАЮТСЯ ",
+      [
+        "emoji",
+        "black_medium_small_square",
+        "25fe"
+      ]
+    ],
+    "channels": [
+      {
+        "name": "lasqa",
+        "count": 45
+      },
+      {
+        "name": "segall",
+        "count": 11
+      }
+    ],
+    "timestamp": 1629548308000,
+    "count": 56
+  },
+  {
     "id": "6e3835e42ce4fceba9f5049fa150182c",
     "message": "АРМЕНКА 4Head АРМЯНКА 4HEader АРМЕНКА 4Head АРМЯНКА 4HEader АРМЕНКА 4Head АРМЯНКА 4HEader",
     "messageParts": [
