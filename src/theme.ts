@@ -1,5 +1,5 @@
 import * as R from "ramda";
-import { createTheme, ThemeOptions } from "@material-ui/core/styles";
+import { createTheme, ThemeOptions } from "@mui/material/styles";
 
 const common: ThemeOptions = {
   palette: {

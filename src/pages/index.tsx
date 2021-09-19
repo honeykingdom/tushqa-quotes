@@ -1,6 +1,6 @@
 import { useCallback, useState } from "react";
 import * as R from "ramda";
-import { Container, Box } from "@material-ui/core";
+import { Container, Box } from "@mui/material";
 import { useSession } from "next-auth/client";
 import Header from "components/Header";
 import QuoteCard from "components/QuoteCard";

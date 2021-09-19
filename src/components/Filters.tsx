@@ -1,9 +1,9 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import { debounce } from "lodash";
-import { Typography, Box, Button, Slider } from "@material-ui/core";
-import { experimentalStyled as styled } from "@material-ui/core/styles";
-import ArrowUpwardIcon from "@material-ui/icons/ArrowUpward";
-import ArrowDownwardIcon from "@material-ui/icons/ArrowDownward";
+import { Typography, Box, Button, Slider } from "@mui/material";
+import { experimentalStyled as styled } from "@mui/material/styles";
+import ArrowUpwardIcon from "@mui/icons-material/ArrowUpward";
+import ArrowDownwardIcon from "@mui/icons-material/ArrowDownward";
 import { defaultFilters } from "pages/index";
 import type { FiltersType } from "types";
 

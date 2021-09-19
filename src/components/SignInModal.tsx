@@ -5,8 +5,8 @@ import {
   Paper,
   Box,
   Button,
-} from "@material-ui/core";
-import CloseIcon from "@material-ui/icons/Close";
+} from "@mui/material";
+import CloseIcon from "@mui/icons-material/Close";
 import { signIn } from "next-auth/client";
 import TwitchIcon from "icons/twitch";
 

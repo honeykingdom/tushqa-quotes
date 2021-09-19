@@ -55,7 +55,7 @@ export enum RatingValue {
   UPVOTE = 1,
 }
 
-declare module "@material-ui/core/styles" {
+declare module "@mui/material/styles" {
   interface Palette {
     thirdly: Palette["primary"];
   }

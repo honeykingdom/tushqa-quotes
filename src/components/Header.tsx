@@ -15,11 +15,11 @@ import {
   Divider,
   Hidden,
   Button,
-} from "@material-ui/core";
-import DarkThemeIcon from "@material-ui/icons/Brightness7";
-import LightThemeIcon from "@material-ui/icons/Brightness4";
-import GitHubIcon from "@material-ui/icons/GitHub";
-import MenuIcon from "@material-ui/icons/Menu";
+} from "@mui/material";
+import DarkThemeIcon from "@mui/icons-material/Brightness7";
+import LightThemeIcon from "@mui/icons-material/Brightness4";
+import GitHubIcon from "@mui/icons-material/GitHub";
+import MenuIcon from "@mui/icons-material/Menu";
 import TwitchIcon from "icons/twitch";
 import { useState } from "react";
 import SEO from "../../next-seo.config";
@@ -88,7 +88,12 @@ const Header = ({ toggleTheme }: Props) => {
       alignItems="center"
     >
       <Tooltip title={THEME_SWITCHER_CAPTION}>
-        <IconButton color="inherit" sx={{ mr: 1 }} onClick={toggleTheme}>
+        <IconButton
+          color="inherit"
+          sx={{ mr: 1 }}
+          onClick={toggleTheme}
+          size="large"
+        >
           {themeIcon}
         </IconButton>
       </Tooltip>
@@ -99,6 +104,7 @@ const Header = ({ toggleTheme }: Props) => {
           href={GITHUB_REPOSITORY_URL}
           target="_blank"
           rel="noreferrer noopener"
+          size="large"
         >
           <GitHubIcon />
         </IconButton>
@@ -235,6 +241,7 @@ const Header = ({ toggleTheme }: Props) => {
           <IconButton
             edge="end"
             onClick={() => setIsMobileMenuVisible(!isMobileMenuVisible)}
+            size="large"
           >
             <MenuIcon />
           </IconButton>

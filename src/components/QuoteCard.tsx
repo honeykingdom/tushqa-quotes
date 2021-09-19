@@ -10,9 +10,9 @@ import {
   Paper,
   Box,
   useTheme,
-} from "@material-ui/core";
-import ArrowUpwardIcon from "@material-ui/icons/ArrowUpward";
-import ArrowDownwardIcon from "@material-ui/icons/ArrowDownward";
+} from "@mui/material";
+import ArrowUpwardIcon from "@mui/icons-material/ArrowUpward";
+import ArrowDownwardIcon from "@mui/icons-material/ArrowDownward";
 import type { MessagePart, QuoteType } from "types";
 import plural from "utils/plural";
 import {
