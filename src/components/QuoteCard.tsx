@@ -1,6 +1,5 @@
 import { Fragment, useMemo, memo } from "react";
 import { format } from "date-fns";
-// import { useSnackbar } from "notistack";
 import styled from "@emotion/styled";
 import { ApolloCache, gql } from "@apollo/client";
 import {
@@ -177,7 +176,6 @@ const QuoteCard = ({
   onOpenSignInModal,
 }: Props) => {
   const theme = useTheme();
-  // const { enqueueSnackbar } = useSnackbar();
   const [updateRating] = useUpdateRatingMutation({
     // onError: () =>
     //   enqueueSnackbar("Ошибка. Сервер не отвечает", {
