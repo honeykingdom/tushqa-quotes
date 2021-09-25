@@ -110,6 +110,7 @@ const emotes: Record<string, Emote> = {
   PepeChill: ["bttv", "5eb9d6c6813f92169355870e"],
   peepoPizza: ["bttv", "5dfd7d6d9e2cd00d968d3acf"],
   peepoJAM: ["bttv", "5df61ce17382d23bbf5a7565"],
+  segallDance: ["bttv", "5f7ca5cece8bc74a942474fc"],
 };
 
 const emojisList = Object.values(emojisMap);
