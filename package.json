@@ -12,7 +12,7 @@
     "copy-logs": "cross-env TS_NODE_COMPILER_OPTIONS='{\\\"module\\\":\\\"commonjs\\\"}' ts-node ./scripts/copyLogs"
   },
   "dependencies": {
-    "@apollo/client": "^3.4.15",
+    "@apollo/client": "^3.4.16",
     "@emotion/react": "^11.4.1",
     "@emotion/server": "^11.4.0",
     "@emotion/styled": "^11.3.0",
@@ -20,9 +20,9 @@
     "@mui/material": "^5.0.2",
     "apollo-server-micro": "3.3.0",
     "class-validator": "^0.13.1",
-    "date-fns": "^2.24.0",
+    "date-fns": "^2.25.0",
     "deepmerge": "^4.2.2",
-    "graphql": "^15.6.0",
+    "graphql": "^15.6.1",
     "immer": "^9.0.6",
     "lodash": "^4.17.21",
     "micro": "^9.3.4",
@@ -36,7 +36,7 @@
     "reflect-metadata": "^0.1.13",
     "ts-tiny-invariant": "^0.0.3",
     "type-graphql": "^1.1.1",
-    "typeorm": "^0.2.37",
+    "typeorm": "^0.2.38",
     "typescript": "^4.4.3"
   },
   "devDependencies": {
@@ -44,7 +44,7 @@
     "@babel/plugin-proposal-decorators": "^7.15.4",
     "@graphql-codegen/cli": "^2.2.0",
     "@graphql-codegen/typescript": "^2.2.2",
-    "@graphql-codegen/typescript-operations": "^2.1.4",
+    "@graphql-codegen/typescript-operations": "^2.1.6",
     "@graphql-codegen/typescript-react-apollo": "^3.1.4",
     "@types/dotenv": "^8.2.0",
     "@types/gtag.js": "^0.0.7",
