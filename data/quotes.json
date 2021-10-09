@@ -1,5 +1,67 @@
 [
   {
+    "id": "644bb4bda7023a2fb415b51d880c3c49",
+    "message": "ЭТИ ЧЕРВИ ПОЛЗУТ ◽ МИМО ◾ ЭТИ ЛЮДИ КРИЧАТ ◽ ГРОМКО ◾ ЗНАЕТ ТОЛЬКО РЫБА ◽ КАК СИЛЬНО ◾ ЕЁ НЕ ВОЛНУЕТ ◽ МОРЕ ◾",
+    "messageParts": [
+      "ЭТИ ЧЕРВИ ПОЛЗУТ ",
+      [
+        "emoji",
+        "white_medium_small_square",
+        "25fd"
+      ],
+      " МИМО ",
+      [
+        "emoji",
+        "black_medium_small_square",
+        "25fe"
+      ],
+      " ЭТИ ЛЮДИ КРИЧАТ ",
+      [
+        "emoji",
+        "white_medium_small_square",
+        "25fd"
+      ],
+      " ГРОМКО ",
+      [
+        "emoji",
+        "black_medium_small_square",
+        "25fe"
+      ],
+      " ЗНАЕТ ТОЛЬКО РЫБА ",
+      [
+        "emoji",
+        "white_medium_small_square",
+        "25fd"
+      ],
+      " КАК СИЛЬНО ",
+      [
+        "emoji",
+        "black_medium_small_square",
+        "25fe"
+      ],
+      " ЕЁ НЕ ВОЛНУЕТ ",
+      [
+        "emoji",
+        "white_medium_small_square",
+        "25fd"
+      ],
+      " МОРЕ ",
+      [
+        "emoji",
+        "black_medium_small_square",
+        "25fe"
+      ]
+    ],
+    "channels": [
+      {
+        "name": "segall",
+        "count": 10
+      }
+    ],
+    "timestamp": 1633626357000,
+    "count": 10
+  },
+  {
     "id": "9dcde4b995f3e82f29704d81ce911152",
     "message": "СУЩИЙ НА НЕБЕСАХ FeelsWowMan СРУЩИЙ НА ПОЛЮСАХ FeelsWowMan",
     "messageParts": [
