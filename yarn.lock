@@ -6914,15 +6914,10 @@ ts-node@^9:
     source-map-support "^0.5.17"
     yn "3.1.1"
 
-ts-tiny-invariant@0.0.3:
+ts-tiny-invariant@0.0.3, ts-tiny-invariant@^0.0.3:
   version "0.0.3"
   resolved "https://registry.yarnpkg.com/ts-tiny-invariant/-/ts-tiny-invariant-0.0.3.tgz#6f51c153c285a7839bb59b1e5a2721fcb25a5e39"
   integrity sha512-EiaBUsUta7PPzVKpvZurcSDgaSkymxwiUc2rhX6Wu30bws2maipT6ihbEY072dU9lz6/FoFWEc6psXdlo0xqtg==
-
-ts-tiny-invariant@^1.0.3:
-  version "1.0.3"
-  resolved "https://registry.yarnpkg.com/ts-tiny-invariant/-/ts-tiny-invariant-1.0.3.tgz#35260ab80b926a278ab9b99f4bd42756c3db4fe1"
-  integrity sha512-41oICyjeModD3gIMRSV/Y1JMXOffN6/NH0MkhWtObi3D6Vcdlrn3VdBiknjLJww2MmW1kfOWmXH7QoWVMyvqbA==
 
 ts-toolbelt@^6.15.1:
   version "6.15.5"
