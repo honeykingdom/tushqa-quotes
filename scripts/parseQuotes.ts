@@ -67,6 +67,7 @@ const main = () => {
 
   const quotes: ParsedQuote[] = fs
     .readFileSync("./data/quotes.md", "utf8")
+    .replace(/\\\*/g, "*")
     .split("\n\n")
     .reverse()
     .map((s) => s.trim())
