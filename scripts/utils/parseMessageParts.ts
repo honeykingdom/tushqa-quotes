@@ -35,6 +35,7 @@ const emotes: Record<string, Emote> = {
   "4Shrug": ["ffz", 226912],
   "4House": ["ffz", 406860],
   "4HEad": ["ffz", 128247],
+  "4Weird": ["ffz", 308193],
   "3Head": ["ffz", 274406],
   Dovolen: ["ffz", 321688],
   peepoClown: ["ffz", 318914],
