@@ -24,12 +24,16 @@
     ],
     "channels": [
       {
+        "name": "lasqa",
+        "count": 12
+      },
+      {
         "name": "segall",
-        "count": 16
+        "count": 23
       }
     ],
     "timestamp": 1640583620000,
-    "count": 16
+    "count": 35
   },
   {
     "id": "6319c962fcd64cde7f3a23cdbfb7be95",
@@ -159,7 +163,13 @@
     "id": "85acd433329b4548dace3f004441dc2c",
     "message": "ПРОШУ ВСЕХ ВСТАТЬ FeelsGoodMan СУД ИДЕТ 4Head НАПИЗДУ 4HEader",
     "messageParts": [
-      "ПРОШУ ВСЕХ ВСТАТЬ FeelsGoodMan СУД ИДЕТ ",
+      "ПРОШУ ВСЕХ ВСТАТЬ ",
+      [
+        "bttv",
+        "566c9fde65dbbdab32ec053e",
+        "FeelsGoodMan"
+      ],
+      " СУД ИДЕТ ",
       [
         "twitch",
         354,
@@ -612,7 +622,13 @@
     "id": "3123941e07c080cd413ee62018f3952b",
     "message": "НО Я ХОТЕЛА САМА PunOko ПРИВЕТ Я СОМ 😎",
     "messageParts": [
-      "НО Я ХОТЕЛА САМА PunOko ПРИВЕТ Я СОМ ",
+      "НО Я ХОТЕЛА САМА ",
+      [
+        "twitch",
+        160401,
+        "PunOko"
+      ],
+      " ПРИВЕТ Я СОМ ",
       [
         "emoji",
         "sunglasses",
