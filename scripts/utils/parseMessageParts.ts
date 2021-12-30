@@ -27,6 +27,7 @@ const emotes: Record<string, Emote> = {
   KomodoHype: ["twitch", 81273],
   LUL: ["twitch", 425618],
   PogChamp: ["twitch", 305954156],
+  PunOko: ["twitch", 160401],
   "4HEader": ["ffz", 165784],
   FeelsWowMan: ["ffz", 391932],
   FeelsOkayMan: ["ffz", 450530],
@@ -112,6 +113,8 @@ const emotes: Record<string, Emote> = {
   peepoPizza: ["bttv", "5dfd7d6d9e2cd00d968d3acf"],
   peepoJAM: ["bttv", "5df61ce17382d23bbf5a7565"],
   segallDance: ["bttv", "5f7ca5cece8bc74a942474fc"],
+  robotD: ["bttv", "5be4b06b176166148ab8d507"],
+  FeelsGoodMan: ["bttv", "566c9fde65dbbdab32ec053e"],
 };
 
 const emojisList = Object.values(emojisMap);
