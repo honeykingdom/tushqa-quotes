@@ -1,5 +1,35 @@
 [
   {
+    "id": "fecf26151e7454d4da0c358959dae293",
+    "message": "Я НЕ ГРАБЛЮ 🙂 НО У МЕНЯ ЕСТЬ ГРАБЛИ 🙃",
+    "messageParts": [
+      "Я НЕ ГРАБЛЮ ",
+      [
+        "emoji",
+        "slightly_smiling_face",
+        "1f642"
+      ],
+      " НО У МЕНЯ ЕСТЬ ГРАБЛИ ",
+      [
+        "emoji",
+        "upside_down_face",
+        "1f643"
+      ]
+    ],
+    "channels": [
+      {
+        "name": "lasqa",
+        "count": 18
+      },
+      {
+        "name": "segall",
+        "count": 5
+      }
+    ],
+    "timestamp": 1643043957000,
+    "count": 23
+  },
+  {
     "id": "c74ed078e68b60469e59a9b507c4087e",
     "message": "ДАГЕСТАНЕЦ 4Head ДАГЭСТОНЕЦ 4HEader",
     "messageParts": [
