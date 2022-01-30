@@ -115,6 +115,7 @@ const emotes: Record<string, Emote> = {
   segallDance: ["bttv", "5f7ca5cece8bc74a942474fc"],
   robotD: ["bttv", "5be4b06b176166148ab8d507"],
   FeelsGoodMan: ["bttv", "566c9fde65dbbdab32ec053e"],
+  LOADING: ["bttv", "5db72e15b537d747e37a8e07"],
 };
 
 const emojisList = Object.values(emojisMap);
