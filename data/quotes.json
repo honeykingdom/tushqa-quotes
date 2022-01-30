@@ -1,5 +1,37 @@
 [
   {
+    "id": "d592e668964605cc13c537215c95b954",
+    "message": "ХУЙНЯ PogT ГАВНО С МОЧОЙ PogU ТОЛЬКО УСПЕВАЙ КРУТИТЬ ГОЛОВОЙ 4Head",
+    "messageParts": [
+      "ХУЙНЯ ",
+      [
+        "bttv",
+        "600ca1ac82cf6865d552d19d",
+        "PogT"
+      ],
+      " ГАВНО С МОЧОЙ ",
+      [
+        "bttv",
+        "60465403306b602acc599226",
+        "PogU"
+      ],
+      " ТОЛЬКО УСПЕВАЙ КРУТИТЬ ГОЛОВОЙ ",
+      [
+        "twitch",
+        354,
+        "4Head"
+      ]
+    ],
+    "channels": [
+      {
+        "name": "segall",
+        "count": 26
+      }
+    ],
+    "timestamp": 1643465074000,
+    "count": 26
+  },
+  {
     "id": "646d2bc3ee5dc5d27cf0977009d390c7",
     "message": "СТОЙ КТО СТОИТ 🙂 С ТОЙ КАКОЙ-ТО ХУЙ СТОИТ 🙃",
     "messageParts": [
@@ -81,7 +113,25 @@
     "id": "8eb2db2ac6c3c607ce2dcaa50894334b",
     "message": "САМА КРУТИТСЯ LOADING САМА САМА КРУТИТСЯ LOADING САМА КРУТИТСЯ LOADING САМОКРУТКА КУРИЦА 🚬",
     "messageParts": [
-      "САМА КРУТИТСЯ LOADING САМА САМА КРУТИТСЯ LOADING САМА КРУТИТСЯ LOADING САМОКРУТКА КУРИЦА ",
+      "САМА КРУТИТСЯ ",
+      [
+        "bttv",
+        "5db72e15b537d747e37a8e07",
+        "LOADING"
+      ],
+      " САМА САМА КРУТИТСЯ ",
+      [
+        "bttv",
+        "5db72e15b537d747e37a8e07",
+        "LOADING"
+      ],
+      " САМА КРУТИТСЯ ",
+      [
+        "bttv",
+        "5db72e15b537d747e37a8e07",
+        "LOADING"
+      ],
+      " САМОКРУТКА КУРИЦА ",
       [
         "emoji",
         "smoking",
