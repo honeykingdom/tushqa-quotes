@@ -1,5 +1,43 @@
 [
   {
+    "id": "1f302ef25af602294773858ed82be28f",
+    "message": "ТЫЩИ ОСКОЛКОВ 🦋 ПРОСТО ЛЕТАЮТ 🦋 ЗЕРКАЛО ПРАВДУ 🦋 РЕБЯТАМ СКАЗАЛО 🦋",
+    "messageParts": [
+      "ТЫЩИ ОСКОЛКОВ ",
+      [
+        "emoji",
+        "butterfly",
+        "1f98b"
+      ],
+      " ПРОСТО ЛЕТАЮТ ",
+      [
+        "emoji",
+        "butterfly",
+        "1f98b"
+      ],
+      " ЗЕРКАЛО ПРАВДУ ",
+      [
+        "emoji",
+        "butterfly",
+        "1f98b"
+      ],
+      " РЕБЯТАМ СКАЗАЛО ",
+      [
+        "emoji",
+        "butterfly",
+        "1f98b"
+      ]
+    ],
+    "channels": [
+      {
+        "name": "segall",
+        "count": 5
+      }
+    ],
+    "timestamp": 1643630442000,
+    "count": 5
+  },
+  {
     "id": "d592e668964605cc13c537215c95b954",
     "message": "ХУЙНЯ PogT ГАВНО С МОЧОЙ PogU ТОЛЬКО УСПЕВАЙ КРУТИТЬ ГОЛОВОЙ 4Head",
     "messageParts": [
