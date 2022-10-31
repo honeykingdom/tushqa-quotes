@@ -1,5 +1,38 @@
 [
   {
+    "id": "d5dc92ee0de709f69a9924515bb81dd0",
+    "message": "УЧАСТНИК ДВИЖЕНИЯ ◽ ПЕРЕМЕЩЕНИЯ ◽ КОПИРУЯ СКОРОСТЬ ПОТОКА ◽ ТЕПЕРЬ КОПИЯ ПО СТОЛЬКУ ПО СКОЛЬКУ",
+    "messageParts": [
+      "УЧАСТНИК ДВИЖЕНИЯ ",
+      [
+        "emoji",
+        "white_medium_small_square",
+        "25fd"
+      ],
+      " ПЕРЕМЕЩЕНИЯ ",
+      [
+        "emoji",
+        "white_medium_small_square",
+        "25fd"
+      ],
+      " КОПИРУЯ СКОРОСТЬ ПОТОКА ",
+      [
+        "emoji",
+        "white_medium_small_square",
+        "25fd"
+      ],
+      " ТЕПЕРЬ КОПИЯ ПО СТОЛЬКУ ПО СКОЛЬКУ"
+    ],
+    "channels": [
+      {
+        "name": "lasqa",
+        "count": 7
+      }
+    ],
+    "timestamp": 1667161007000,
+    "count": 7
+  },
+  {
     "id": "9ddeaf1d9136b17ecc71e7a3566aec03",
     "message": "ПРОХЛАДНЫЙ ВЕТЕР ◽ ПЕЩЕРУ СТРОЙТЕ ◽ ЗАБУДЬТЕ ВРЕМЯ ◽ И ТАК ПРИХЛОПНЕТ",
     "messageParts": [
