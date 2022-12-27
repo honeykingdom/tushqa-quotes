@@ -2,7 +2,7 @@ import R from "ramda";
 import { MessagePart, TwitchEmote, BttvEmote, FfzEmote, Emoji } from "types";
 import emojisMap from "./emojisMap.json";
 
-type Emote = ["twitch" | "ffz", number] | ["bttv", string];
+type Emote = ["twitch", number | string] | ["ffz", number] | ["bttv", string];
 
 const emotes: Record<string, Emote> = {
   "R)": ["twitch", 14],
@@ -28,6 +28,7 @@ const emotes: Record<string, Emote> = {
   LUL: ["twitch", 425618],
   PogChamp: ["twitch", 305954156],
   PunOko: ["twitch", 160401],
+  SUBprise: ["twitch", "emotesv2_fcbeed664f7c47d6ba3b57691275ef51"],
   "4HEader": ["ffz", 165784],
   FeelsWowMan: ["ffz", 391932],
   FeelsOkayMan: ["ffz", 450530],
